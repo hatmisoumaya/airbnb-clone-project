@@ -227,3 +227,27 @@ The app enforces HTTPS in production and uses secure, HTTP-only cookies for sess
 Payment Security
 Payments are processed via trusted third-party providers like Stripe, which handle PCI compliance, tokenization, and fraud protection.
 👉 Why it matters: Ensures that sensitive financial data is never stored on our servers, protecting users and reducing liability.
+
+
+### CI/CD Pipeline
+CI/CD stands for Continuous Integration and Continuous Deployment, which are essential practices in modern software development. They automate the process of testing, building, and deploying code whenever changes are pushed to the repository.
+
+Why CI/CD Matters
+CI/CD pipelines help ensure that:
+
+Code changes are automatically tested and verified before deployment.
+
+Deployments are faster, more reliable, and consistent across environments.
+
+Bugs are caught early through automated testing and linting.
+
+Developer productivity improves through automation of repetitive tasks.
+
+Tools Used
+GitHub Actions: Automates workflows for testing, building, and deploying the application when code is pushed or a pull request is opened.
+
+Docker: Containerizes the application for consistent deployment across development, staging, and production environments.
+
+Vercel / Render / Railway (optional): Used for continuous deployment of the frontend and backend services.
+
+CI/CD ensures the Airbnb Clone project is always production-ready and up-to-date with the latest code, reducing the chance of manual errors and downtime.
