@@ -200,3 +200,30 @@ The application is fully responsive and mobile-friendly. Users can access all fe
 
 Authentication with NextAuth
 Implements secure user authentication using providers like Google or Email/Password. Sessions are handled safely with built-in protection against CSRF and other attacks.
+
+### API Security
+Securing the backend APIs is critical to ensure user safety, protect sensitive data, and prevent malicious activity. Below are the key security measures implemented in this project:
+
+Authentication
+All endpoints that handle personal or sensitive operations require user authentication. We use secure methods such as JWT (JSON Web Tokens) or NextAuth to verify user identity.
+👉 Why it matters: Prevents unauthorized access and ensures that only legitimate users can interact with their own data.
+
+Authorization
+Role-based access control (RBAC) is enforced to differentiate between guests, hosts, and admins. Users can only access or modify data they are permitted to.
+👉 Why it matters: Ensures that, for example, a guest cannot delete another user’s property or access someone else’s bookings.
+
+Rate Limiting
+Requests to the API are rate-limited using middleware (e.g., express-rate-limit or similar tools in Next.js) to prevent abuse and denial-of-service (DoS) attacks.
+👉 Why it matters: Throttles excessive or automated requests to protect server resources and user experience.
+
+Data Validation & Sanitization
+All user inputs are validated and sanitized using tools like Zod or custom middleware. This helps prevent injection attacks (e.g., SQL injection, XSS).
+👉 Why it matters: Reduces vulnerabilities and protects the application from malicious input.
+
+HTTPS & Secure Cookies
+The app enforces HTTPS in production and uses secure, HTTP-only cookies for session management.
+👉 Why it matters: Encrypts data in transit and protects session tokens from client-side access or interception.
+
+Payment Security
+Payments are processed via trusted third-party providers like Stripe, which handle PCI compliance, tokenization, and fraud protection.
+👉 Why it matters: Ensures that sensitive financial data is never stored on our servers, protecting users and reducing liability.
