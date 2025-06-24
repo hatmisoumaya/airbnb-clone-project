@@ -74,3 +74,103 @@ Purpose: Used together to manage complex forms (like listing creation) with vali
 Vercel
 Purpose: Cloud platform for hosting and deploying the Next.js frontend with fast global delivery.
 
+### Database Design
+The database schema is designed to capture the core functionality of an Airbnb-like platform. Below are the key entities, their important fields, and relationships:
+
+User
+Represents guests or hosts using the platform.
+
+id – Unique identifier (UUID)
+
+name – Full name of the user
+
+email – User’s email (unique)
+
+role – Indicates if the user is a host or guest
+
+createdAt – Date of registration
+
+🔗 Relationships:
+
+A user can own many properties.
+
+A user can make many bookings.
+
+A user can write many reviews.
+
+Property
+Represents a place listed by a host.
+
+id – Unique identifier
+
+title – Name or title of the property
+
+description – Details about the property
+
+location – Address or coordinates
+
+pricePerNight – Cost per night
+
+🔗 Relationships:
+
+A property is owned by one user.
+
+A property can have many bookings.
+
+A property can have many reviews.
+
+Booking
+Represents a reservation made by a guest.
+
+id – Unique identifier
+
+userId – The guest who made the booking
+
+propertyId – The property being booked
+
+startDate – Check-in date
+
+endDate – Check-out date
+
+🔗 Relationships:
+
+A booking belongs to one user (guest).
+
+A booking belongs to one property.
+
+Review
+Represents feedback left by a guest after a stay.
+
+id – Unique identifier
+
+rating – Numeric rating (e.g., 1–5 stars)
+
+comment – Optional text review
+
+userId – Reviewer
+
+propertyId – Reviewed property
+
+🔗 Relationships:
+
+A review is written by one user.
+
+A review is about one property.
+
+Payment
+Represents a payment made for a booking.
+
+id – Unique identifier
+
+bookingId – Linked booking
+
+amount – Total amount paid
+
+paymentMethod – e.g., card, PayPal
+
+status – e.g., completed, pending
+
+🔗 Relationships:
+
+A payment belongs to one booking.
+
