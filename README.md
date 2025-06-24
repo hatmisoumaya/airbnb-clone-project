@@ -1,4 +1,4 @@
-# airbnb-clone-project
+# Team Roles
 🧑‍💻 Team Roles
 This project is developed collaboratively by a cross-functional team, where each member contributes through a defined role. Below are the key roles and their responsibilities:
 
