@@ -174,3 +174,29 @@ status – e.g., completed, pending
 
 A payment belongs to one booking.
 
+### Feature Breakdown
+This project replicates the essential features of Airbnb, providing a full-stack experience for users to list, browse, and book properties.
+
+User Management
+Allows users to sign up, log in, and manage their accounts. Authentication is handled securely, and users can act as hosts or guests depending on their role.
+
+Property Management
+Hosts can create, update, and delete listings with details such as title, description, photos, location, and pricing. This feature allows hosts to showcase their properties to potential guests.
+
+Booking System
+Guests can select available dates and book properties with real-time availability validation. It handles date conflict checks, total cost calculation, and booking confirmation.
+
+Search & Filters
+Users can search properties by location, price range, category (e.g., beachfront, cabin), and date availability. This enhances the user experience by allowing fast and relevant discovery of listings.
+
+Reviews and Ratings
+After completing a booking, guests can leave a rating and review for the property. These reviews help future guests make informed decisions and encourage quality from hosts.
+
+Payments Integration
+Payments are securely processed using a payment gateway (e.g., Stripe). Guests can pay for their bookings, and payment status is tracked for every transaction.
+
+Responsive Design
+The application is fully responsive and mobile-friendly. Users can access all features on any device, ensuring a consistent experience across platforms.
+
+Authentication with NextAuth
+Implements secure user authentication using providers like Google or Email/Password. Sessions are handled safely with built-in protection against CSRF and other attacks.
